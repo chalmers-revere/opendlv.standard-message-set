@@ -1,0 +1,254 @@
+/*
+ * Copyright (C) 2016 Chalmers REVERE
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+message opendlv.coord.Position [id = 1000] {
+  float x [id = 1];
+  float y [id = 2];
+  float z [id = 3];
+}
+
+message opendlv.coord.Frame [id = 1001] {
+  float x [id = 1];
+  float y [id = 2];
+  float z [id = 3];
+  float roll [id = 4];
+  float pitch [id = 5];
+  float yaw [id = 6];
+}
+
+message opendlv.coord.KinematicState [id = 1002] {
+  float vx [id = 1];
+  float vy [id = 2];
+  float vz [id = 3];
+  float rollRate [id = 4];
+  float pitchRate [id = 5];
+  float yawRate [id = 6];
+}
+
+message opendlv.coord.CubeShape [id = 1008] {
+  float length [id = 1];
+  float width [id = 2];
+  float height [id = 3];
+}
+
+message opendlv.coord.ConeShape [id = 1009] {
+  float radius [id = 1];
+  float height [id = 2];
+}
+
+message opendlv.body.ComponentInfo [id = 1021] {
+  opendlv.coord.Position position [id = 1];
+  string description [id = 2];
+}
+
+message opendlv.body.ActuatorInfo [id = 1022] {
+  opendlv.coord.Position position [id = 1];
+  string description [id = 2];
+  uint32 signalId [id = 3];
+  float minValue [id = 4];
+  float maxValue [id = 5];
+}
+
+message opendlv.body.SensorInfo [id = 1023] {
+  opendlv.coord.Position position [id = 1];
+  string description [id = 2];
+  uint32 signalId [id = 3];
+  float accuracyStd [id = 4];
+}
+
+message opendlv.body.SignalInfo [id = 1024] {
+  string description [id = 1];
+  uint32 signalId [id = 2];
+  float accuracyStd [id = 3];
+}
+
+message opendlv.proxy.GroundSpeedReading [id = 1031] {
+  float groundSpeed [id = 1];
+}
+
+message opendlv.proxy.GroundSteeringReading [id = 1032] {
+  float groundSteering [id = 1];
+}
+
+message opendlv.proxy.AccelerometerReading [id = 1033] {
+  float accelerationX [id = 1];
+  float accelerationY [id = 2];
+  float accelerationZ [id = 3];
+}
+
+message opendlv.proxy.MagnetometerReading [id = 1034] {
+  float magneticFieldX [id = 1];
+  float magneticFieldY [id = 2];
+  float magneticFieldZ [id = 3];
+}
+
+message opendlv.proxy.GyroscopeReading [id = 1035] {
+  float angularVelocityX [id = 1];
+  float angularVelocityY [id = 2];
+  float angularVelocityZ [id = 3];
+}
+
+message opendlv.proxy.GeodeticWgs84Reading [id = 19] {
+  float latitude [id = 1];
+  float longitude [id = 3];
+}
+
+message opendlv.proxy.GeodeticHeadingReading [id = 1037] {
+  float northHeading [id = 1];
+}
+
+message opendlv.proxy.GroundSteeringRequest [id = 1071] {
+  float groundSteering [id = 1];
+}
+
+message opendlv.proxy.GroundAccelerationRequest [id = 1072] {
+  float groundAcceleration [id = 1];
+}
+
+message opendlv.proxy.GroundDecelerationRequest [id = 1073] {
+  float groundDeceleration [id = 1];
+}
+
+message opendlv.proxy.GroundSpeedRequest [id = 1074] {
+  float groundSpeed [id = 1];
+}
+
+
+message opendlv.system.SignalStatusMessage [id = 1091] {
+  int32 code [id = 1];
+  string description [id = 2];
+}
+
+message opendlv.system.SystemOperationState [id = 1092] {
+  int32 code [id = 1];
+  string description [id = 2];
+}
+
+message opendlv.system.NetworkStatusMessage [id = 1093] {
+  int32 code [id = 1];
+  string description [id = 2];
+}
+
+message opendlv.logic.sensation.Direction [id = 1101] {
+  float azimuthAngle [id = 1];
+  float zenithAngle [id = 2];
+}
+
+message opendlv.logic.sensation.Point [id = 1102] {
+  float azimuthAngle [id = 1];
+  float zenithAngle [id = 2];
+  float distance [id = 3];
+}
+
+message opendlv.logic.sensation.AngularBlob [id = 1103] {
+  float angularWidth [id = 1];
+  float angularHeight [id = 2];
+}
+
+message opendlv.logic.sensation.Attention [id = 1104] {
+  float azimuthAngle [id = 1];
+  float zenithAngle [id = 2];
+}
+
+message opendlv.logic.sensation.Geolocation [id = 1105] {
+  float latitude [id = 1];
+  float longitude [id = 2];
+  float altitude [id = 3];
+  float heading [id = 4];
+}
+
+message opendlv.logic.perception.Object [id = 1121] {
+  uint32 objectId [id = 1];
+}
+
+message opendlv.logic.perception.ObjectType [id = 1122] {
+  uint32 objectId [id = 1];
+  uint32 type [id = 2];
+}
+
+message opendlv.logic.perception.ObjectProperty [id = 1123] {
+  uint32 objectId [id = 1];
+  string property [id = 2];
+}
+
+message opendlv.logic.perception.ObjectDirection [id = 1124] {
+  uint32 objectId [id = 1];
+  float azimuthAngle [id = 2];
+  float zenithAngle [id = 3];
+}
+
+message opendlv.logic.perception.ObjectDistance [id = 1125] {
+  uint32 objectId [id = 1];
+  float distance [id = 2];
+}
+
+message opendlv.logic.perception.ObjectAngularBlob [id = 1126] {
+  uint32 objectId [id = 1];
+  float width [id = 2];
+  float height [id = 3];
+}
+
+message opendlv.logic.perception.Surface [id = 1131] {
+  uint32 surfaceId [id = 1];
+}
+
+message opendlv.logic.perception.SurfaceType [id = 1132] {
+  uint32 surfaceId [id = 1];
+  uint32 type [id = 2];
+}
+
+message opendlv.logic.perception.SurfaceProperty [id = 1133] {
+  uint32 surfaceId [id = 1];
+  string property [id = 2];
+}
+
+message opendlv.logic.perception.SurfaceTraversableConnection [id = 1134] {
+  uint32 surfaceId [id = 1];
+  uint32 traversableTo [id = 2];
+}
+
+// message opendlv.logic.perception.SurfacePolygon [id = 1135] {
+//   uint32 surfaceId [id = 1];
+//   list<opendlv.coord.Position> polygon [id = 2];
+// }
+
+message opendlv.logic.action.AimDirection [id = 1161] {
+  float azimuthAngle [id = 1];
+  float zentihAngle [id = 2];
+}
+
+message opendlv.logic.action.AimPoint [id = 1162] {
+  float azimuthAngle [id = 1];
+  float zenithAngle [id = 2];
+  float distance [id = 3];
+}
+
+message opendlv.logic.action.PreviewPoint [id = 1163] {
+  float azimuthAngle [id = 1];
+  float zenithAngle [id = 2];
+  float distance [id = 3];
+}
+
+message opendlv.logic.cognition.GroundSteeringLimit [id = 1181] {
+  float steeringLimit [id = 1];
+}
+
+message opendlv.logic.cognition.GroundSpeedLimit [id = 1182] {
+  float speedLimit [id = 1];
+}
+
