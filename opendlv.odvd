@@ -103,7 +103,7 @@ message opendlv.proxy.GyroscopeReading [id = 1035] {
   float angularVelocityZ [id = 3];
 }
 
-message opendlv.proxy.GeodeticWgs84Reading [id = 19] {
+message GeodeticWgs84Reading [id = 19] {
   double latitude [id = 1];
   double longitude [id = 3];
 }
