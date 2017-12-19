@@ -104,8 +104,8 @@ message opendlv.proxy.GyroscopeReading [id = 1035] {
 }
 
 message opendlv.proxy.GeodeticWgs84Reading [id = 19] {
-  float latitude [id = 1];
-  float longitude [id = 3];
+  double latitude [id = 1];
+  double longitude [id = 3];
 }
 
 message opendlv.proxy.GeodeticHeadingReading [id = 1037] {
