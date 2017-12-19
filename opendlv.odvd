@@ -103,7 +103,7 @@ message opendlv.proxy.GyroscopeReading [id = 1035] {
   float angularVelocityZ [id = 3];
 }
 
-message GeodeticWgs84Reading [id = 19] {
+message opendlv.proxy.GeodeticWgs84Reading [id = 19] {
   double latitude [id = 1];
   double longitude [id = 3];
 }
@@ -252,3 +252,7 @@ message opendlv.logic.cognition.GroundSpeedLimit [id = 1182] {
   float speedLimit [id = 1];
 }
 
+message test.CarSpeed  [id = 512] {
+	double latSpeed [id = 10];
+	double lonSpeed [id = 12];
+}
