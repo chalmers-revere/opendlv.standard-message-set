@@ -103,7 +103,7 @@ message opendlv.proxy.TorqueReading [id = 1036] {
 }
 
 message opendlv.proxy.VoltageReading [id = 1037] {
-  float torque [id = 1];
+  float voltage [id = 1];
 }
 
 message opendlv.proxy.AngleReading [id = 1038] {
@@ -181,7 +181,7 @@ message opendlv.proxy.TorqueRequest [id = 1082] {
 }
 
 message opendlv.proxy.VoltageRequest [id = 1083] {
-  float torque [id = 1];
+  float voltage [id = 1];
 }
 
 message opendlv.proxy.AngleRequest [id = 1084] {
