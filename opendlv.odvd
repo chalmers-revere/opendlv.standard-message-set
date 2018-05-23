@@ -260,8 +260,8 @@ message opendlv.logic.sensation.Point [id = 1111] {
 }
 
 message opendlv.logic.sensation.Geolocation [id = 1116] {
-  float latitude [id = 1];
-  float longitude [id = 2];
+  double latitude [id = 1];
+  double longitude [id = 2];
   float altitude [id = 3];
   float heading [id = 4];
 }
