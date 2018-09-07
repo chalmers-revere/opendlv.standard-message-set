@@ -168,6 +168,7 @@ message opendlv.proxy.PointCloudReading [id = 49] {
   uint8 entriesPerAzimuth [id = 3];
   bytes distances [id = 4];
   uint8 numberOfBitsForIntensity [id = 5];
+  uint8 typeOfVerticalAngularLayout [id = 6]; // 0 = vertical angular layout for HDL32e, 1 = vertical angular layout fo VLP32c, ignored for other sensors.
 }
 
 message opendlv.proxy.PointCloudReadingShared [id = 28] {
