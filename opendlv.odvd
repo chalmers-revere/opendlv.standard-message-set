@@ -252,6 +252,15 @@ message opendlv.system.NetworkStatusMessage [id = 1102] {
   string description [id = 2];
 }
 
+message opendlv.system.MicroserviceStatistics [id = 1105] {
+  string name [id = 1];
+  string identifier [id = 2];
+  float cpuPercent [id = 3];
+  bool valid [id = 4];
+  uint8 cores [id = 5];
+  uint64 memoryUsage [id = 6];
+  uint64 cache [id = 7];
+}
 
 
 message opendlv.logic.sensation.Direction [id = 1110] {
