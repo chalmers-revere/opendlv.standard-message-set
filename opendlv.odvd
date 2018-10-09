@@ -255,13 +255,12 @@ message opendlv.system.NetworkStatusMessage [id = 1102] {
 message opendlv.system.MicroserviceStatistics [id = 1105] {
   string name [id = 1];
   string identifier [id = 2];
-  float cpuPercent [id = 3];
-  bool valid [id = 4];
-  uint8 cores [id = 5];
-  uint64 memoryUsage [id = 6];
-  uint64 cache [id = 7];
+  uint8 cores [id = 3];
+  float CPU [id = 4];
+  uint64 VIRT [id = 5];
+  uint64 RES [id = 6];
+  float MEM [id = 7];
 }
-
 
 message opendlv.logic.sensation.Direction [id = 1110] {
   float azimuthAngle [id = 1];
