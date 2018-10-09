@@ -252,7 +252,15 @@ message opendlv.system.NetworkStatusMessage [id = 1102] {
   string description [id = 2];
 }
 
-
+message opendlv.system.MicroserviceStatistics [id = 1105] {
+  string name [id = 1];
+  string identifier [id = 2];
+  uint8 cores [id = 3];
+  float CPU [id = 4];
+  uint64 VIRT [id = 5];
+  uint64 RES [id = 6];
+  float MEM [id = 7];
+}
 
 message opendlv.logic.sensation.Direction [id = 1110] {
   float azimuthAngle [id = 1];
