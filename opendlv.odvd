@@ -253,8 +253,9 @@ message opendlv.system.NetworkStatusMessage [id = 1102] {
 }
 
 // This message can be used to post user-supplied comments (like test descriptions, annotation, ...)
-message opendlv.CommentMessage [id = 1103] {
-  string comment [id = 1];
+message opendlv.system.LogMessage [id = 1103] {
+  uint32 logLevel [id = 1];
+  string comment [id = 2];
 }
 
 
