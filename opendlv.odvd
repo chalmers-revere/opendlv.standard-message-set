@@ -252,6 +252,10 @@ message opendlv.system.NetworkStatusMessage [id = 1102] {
   string description [id = 2];
 }
 
+// This message can be used to post user-supplied comments (like test descriptions, annotation, ...)
+message opendlv.CommentMessage [id = 1103] {
+  string comment [id = 1];
+}
 
 
 message opendlv.logic.sensation.Direction [id = 1110] {
