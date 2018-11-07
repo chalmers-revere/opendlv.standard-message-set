@@ -252,6 +252,10 @@ message opendlv.system.NetworkStatusMessage [id = 1102] {
   string description [id = 2];
 }
 
+message opendlv.system.LogMessage [id = 1103] {
+  uint8 level [default = 6, id = 1]; // based on syslog: 0 = Emergency, 1 = Alert, 2 = Critical, 3 = Error, 4 = Warning, 5 = Notice, 6 = Informational, 7 = Debug   
+  string description [id = 2];
+}
 
 
 message opendlv.logic.sensation.Direction [id = 1110] {
