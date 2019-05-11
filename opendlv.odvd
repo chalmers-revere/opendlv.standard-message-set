@@ -125,7 +125,8 @@ message opendlv.proxy.ImageReading [id = 1055] {
 }
 
 message opendlv.proxy.RemoteMessageReading [id = 1056] {
-  string remoteMessage [id = 1];
+  string address [id = 1];
+  string message [id = 2];
 }
 
 // The PointCloudReading message is deprecated, should not be device specific.
@@ -193,7 +194,8 @@ message opendlv.proxy.AxleAngularVelocityRequest [id = 1094] {
 }
 
 message opendlv.proxy.RemoteMessageRequest [id = 1095] {
-  string remoteMessage [id = 1];
+  string address [id = 1];
+  string message [id = 2];
 }
 
 message opendlv.system.SignalStatusMessage [id = 1100] {
