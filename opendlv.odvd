@@ -118,10 +118,10 @@ message opendlv.proxy.GeodeticWgs84Reading [id = 19] {
 }
 
 message opendlv.proxy.ImageReading [id = 1055] {
-    string fourcc [id = 1];
-    uint32 width [id = 2];
-    uint32 height [id = 3];
-    bytes data [id = 4];
+  string fourcc [id = 1];
+  uint32 width [id = 2];
+  uint32 height [id = 3];
+  bytes data [id = 4];
 }
 
 message opendlv.proxy.RemoteMessageReading [id = 1056] {
@@ -248,6 +248,13 @@ message opendlv.logic.sensation.Equilibrioception [id = 1017] {
   float yawRate [id = 6];
 }
 
+message opendlv.logic.perception.ObjectFrameStart [id = 1128] {
+  uint32 objectFrameId [id = 1];
+}
+
+message opendlv.logic.perception.ObjectFrameEnd [id = 1129] {
+  uint32 objectFrameId [id = 1];
+}
 
 message opendlv.logic.perception.Object [id = 1130] {
   uint32 objectId [id = 1];
@@ -322,6 +329,16 @@ message opendlv.logic.action.PreviewPoint [id = 1173] {
   float azimuthAngle [id = 1];
   float zenithAngle [id = 2];
   float distance [id = 3];
+}
+
+message opendlv.logic.action.GeodeticPath [id = 1180] {
+  uint32 length [id = 1];
+  bytes data [id = 2];
+}
+
+message opendlv.logic.action.LocalPath [id = 1181] {
+  uint32 length [id = 1];
+  bytes data [id = 2];
 }
 
 message opendlv.logic.cognition.GroundMotionLimit [id = 1191] {
