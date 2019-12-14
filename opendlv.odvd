@@ -291,7 +291,7 @@ message opendlv.logic.perception.ObjectPosition [id = 1136] {
   uint32 objectId [id = 1];
   float x [id = 2];
   float y [id = 3];
-  float z [id = 3];
+  float z [id = 4];
 }
 
 message opendlv.logic.perception.GroundSurface [id = 1140] {
