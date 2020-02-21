@@ -59,6 +59,8 @@ opendlv.proxy.PointCloudReading (id: 49)
 
 opendlv.proxy.PointCloudReadingShared (id: 28)
 
+opendlv.proxy.QuaternionReading (id: 1052)
+
 
 ### Actuation requests
 
