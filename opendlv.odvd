@@ -142,6 +142,13 @@ message opendlv.proxy.GeodeticHeadingReading [id = 1051] {
   float northHeading [id = 1];
 }
 
+message opendlv.proxy.QuaternionReading [id = 1052] {
+  float w [id = 1];
+  float x [id = 2];
+  float y [id = 3];
+  float z [id = 4];
+}
+
 message opendlv.proxy.GeodeticWgs84Reading [id = 19] {
   double latitude [id = 1];
   double longitude [id = 3];
