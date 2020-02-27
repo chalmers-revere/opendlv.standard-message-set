@@ -248,6 +248,12 @@ message opendlv.logic.sensation.Equilibrioception [id = 1017] {
   float yawRate [id = 6];
 }
 
+message opendlv.logic.sensation.Orientation [id = 1118] {
+  float yaw [id = 1];
+  float pitch [id = 2];
+  float roll [id = 3];
+}
+
 message opendlv.logic.perception.ObjectFrameStart [id = 1128] {
   uint32 objectFrameId [id = 1];
 }
