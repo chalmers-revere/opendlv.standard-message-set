@@ -249,9 +249,9 @@ message opendlv.logic.sensation.Equilibrioception [id = 1017] {
 }
 
 message opendlv.logic.sensation.Orientation [id = 1118] {
-  float yaw [id = 1];
+  float roll [id = 1];
   float pitch [id = 2];
-  float roll [id = 3];
+  float yaw [id = 3];
 }
 
 message opendlv.logic.perception.ObjectFrameStart [id = 1128] {
